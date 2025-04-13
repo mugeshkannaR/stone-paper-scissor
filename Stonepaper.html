@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+  
+  </head>
+  <body>
+    <input type="button" name="" id="inp1" value="stone"  onclick="sps(0)" />
+    <input type="button" name="" id="inp2" value="paper" onclick="sps(1)"/>
+    <input type="button" name="" id="inp3" value="siscor" onclick="sps(2)"/>
+    <input type="text" name="" id="inr" value="" />
+   opponent <input type="text" name="" id="inr1" value="" />
+    
+    <script>
+    function  sps(n)
+    {
+      var three = ["stone","paper","siscor"] ;
+     var ran = Math.floor(Math.random ()* ) ;
+     var rand = three[ran] ;
+     console.log(rand)
+     var x ;
+     if (n==0)
+     {
+       x="stone" ;
+     }
+     else if (n==1)
+     {
+       x="paper" ;
+     }
+     else if (n==2)
+     {
+       x="siscor";
+     }
+     if (rand==x)
+     {
+       var a = "draw"
+       document.getElementById("inr").value=a
+       document.getElementById("inr1").value=rand
+     }
+     else if (x=="stone" && rand=="siscor")
+     {
+       var a = "you won"
+       document.getElementById("inr").value=a
+       document.getElementById("inr1").value=rand
+     }
+     else if (x=="stone" && rand=="paper")
+     {
+       var a = "you lost"
+       document.getElementById("inr").value=a
+       document.getElementById("inr1").value=rand
+     }
+     else if (x=="paper" && rand=="stone")
+     {
+       var a = "you won"
+       document.getElementById("inr").value=a
+       document.getElementById("inr1").value=rand
+     }
+     else if (x=="paper" && rand=="siscor")
+     {
+       var a = "you lost"
+       document.getElementById("inr").value=a
+       document.getElementById("inr1").value=rand
+     }
+     else if (x=="siscor" && rand=="stone")
+     {
+       var a = "you lost"
+       document.getElementById("inr").value=a
+       document.getElementById("in11").value=rand
+     }
+     else if (x=="siscor" && rand=="paper")
+     {
+       var a = "you won"
+       document.getElementById("inr").value=a
+       document.getElementById("inr1").value=rand
+     }
+    }
+      
+    </script>
+  </body>
+</html>
